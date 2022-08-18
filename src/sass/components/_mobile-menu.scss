@@ -1,0 +1,64 @@
+.menu-button {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  z-index: 110;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+
+  &.is-open {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+  }
+  @include mq(desktop) {
+    display: none;
+  }
+}
+.burger-menu {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--mobile-menu-color);
+  transition: transform var(--transition), background-color var(--transition);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--mobile-menu-color);
+    left: 0;
+    z-index: 120;
+    transition: transform var(--transition), background-color var(--transition);
+  }
+  &::before {
+    width: 75%;
+    top: 8px;
+  }
+  &::after {
+    top: -8px;
+  }
+}
+.is-open .burger-menu {
+  background-color: transparent;
+}
+.is-open .burger-menu::before,
+.is-open .burger-menu::after {
+  background-color: var(--mobile-menu-color);
+  top: 0;
+}
+.is-open .burger-menu::before {
+  width: 100%;
+  transform: rotate(45deg);
+}
+.is-open .burger-menu::after {
+  transform: rotate(-45deg);
+}

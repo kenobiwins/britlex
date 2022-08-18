@@ -1,0 +1,29 @@
+.modal {
+  padding: 40px;
+
+  background-color: var(--white);
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+
+  border: none;
+  border-radius: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+
+  @include mq(mobile) {
+    width: 94vw;
+    height: auto;
+  }
+  @include mq(tablet) {
+    width: 450px;
+    height: 95vh;
+  }
+  @include mq(desktop) {
+    width: 528px;
+    height: auto;
+  }
+}

@@ -1,0 +1,121 @@
+.skills {
+  @include mq(mobile) {
+    @include section(26px, 26px);
+  }
+  @include mq(tabet) {
+    @include section(28px, 26px);
+  }
+  @include mq(desktop) {
+    @include section(90px, 90px);
+  }
+  &__container {
+    @include mq(tabet) {
+      padding: 0 4px;
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+}
+
+.skills__list {
+  display: grid;
+}
+
+@include mq(mobile) {
+  .skills__list {
+    gap: 21px;
+  }
+  .skills__subtitle {
+    margin-bottom: 18px;
+  }
+  .skills__text {
+    margin-bottom: 13px;
+  }
+}
+
+@include mq(tablet) {
+  .skills__list {
+    gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-areas:
+      'tall normal normal'
+      'tall wide wide';
+  }
+  .skills__item.wide {
+    display: flex;
+    grid-area: wide;
+    flex-direction: row-reverse;
+    grid-column: span 2;
+    grid-row: span 1;
+    padding-bottom: 26px;
+    padding-left: 18px;
+  }
+  .wide .skills__wrapper {
+    width: 53%;
+  }
+  .skills__item.tall {
+    grid-area: tall;
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .skills__subtitle {
+    margin-bottom: 14px;
+  }
+  .skills__text {
+    margin-bottom: 24px;
+  }
+}
+
+@include mq(desktop) {
+  .skills__subtitle {
+    margin-bottom: 22px;
+  }
+  .skills__text {
+    margin-bottom: 30px;
+  }
+}
+
+.skills__item {
+  background-color: var(--card-background);
+  border-radius: 5px;
+  padding: 8px 16px 45px 16px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  @each $num in 1, 2, 3, 4 {
+    &:nth-child(#{$num}):before {
+      content: '';
+      display: block;
+      flex-grow: 1;
+      width: 214px;
+      height: 214px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../images/skills/card#{$num}.webp);
+    }
+    @include mq(mobile) {
+      &:nth-child(2)::before {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+.skills__wrapper {
+  align-items: center;
+}
+.skills__button {
+  margin-top: auto;
+  @include mq(mobile) {
+    align-self: flex-start;
+  }
+  @include mq(tabet) {
+    align-self: center;
+  }
+  @include mq(desktop) {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,94 @@
+.hero {
+  @include mq(mobile) {
+    @include section(110px, 28px);
+  }
+  @include mq(tablet) {
+    @include section();
+  }
+  @include mq(desktop) {
+    @include section(180px, 90px);
+  }
+
+  &__container {
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+    @include mq(mobile) {
+    }
+    @include mq(tablet) {
+      max-width: 352px;
+      &::before {
+        content: '';
+        background-image: url(/src/images/hero/bulb-icon.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        right: 8px;
+        @include mq(desktop) {
+          width: 85px;
+          height: 85px;
+        }
+      }
+    }
+    @include mq(desktop) {
+      max-width: 540px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    letter-spacing: 0em;
+    @include mq(mobile) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @include mq(tablet) {
+      margin-bottom: 35px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    @include mq(mobile) {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    @include mq(tablet) {
+    }
+    @include mq(desktop) {
+      margin-bottom: 60px;
+    }
+  }
+  &__button {
+    @include mq(tablet) {
+      width: 236px;
+      margin-top: auto;
+      align-self: flex-start;
+    }
+    @include mq(desktop) {
+      width: 426px;
+    }
+  }
+}
+
+.hero__img {
+  @include mq(mobile) {
+    margin-bottom: 16px;
+  }
+  @include mq(tablet) {
+  }
+  @include mq(desktop) {
+  }
+}
