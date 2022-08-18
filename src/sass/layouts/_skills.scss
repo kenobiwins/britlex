@@ -8,11 +8,7 @@
   @include mq(desktop) {
     @include section(90px, 90px);
   }
-  &__container {
-    @include mq(tabet) {
-      padding: 0 4px;
-    }
-  }
+
   &__title {
     text-align: center;
   }
@@ -35,6 +31,9 @@
 }
 
 @include mq(tablet) {
+  .skills__container {
+    padding: 0 4px;
+  }
   .skills__list {
     gap: 10px;
     grid-auto-flow: dense;
