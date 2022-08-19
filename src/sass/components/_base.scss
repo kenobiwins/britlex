@@ -70,6 +70,7 @@
   color: var(--title-primary);
   @include mq(mobile) {
     @include fonts(24px, 36px, 600);
+    text-align: center;
   }
   @include mq(tablet) {
     @include fonts(30px, 38px, 600);

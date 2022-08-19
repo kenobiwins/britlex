@@ -1,0 +1,124 @@
+.pricing {
+  @include mq(mobile) {
+    @include section(26px, 26px);
+  }
+  @include mq(tablet) {
+    @include section(28px, 26px);
+  }
+  @include mq(desktop) {
+    @include section(90px, 90px);
+  }
+}
+
+.pricing__title {
+  text-align: center;
+  @include mq(mobile) {
+    margin-bottom: 31px;
+  }
+  @include mq(tablet) {
+    margin-bottom: 41px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 60px;
+  }
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 24px;
+
+  @include mq(mobile) {
+    max-width: 272px;
+    max-height: 451px;
+  }
+  @include mq(tablet) {
+    max-width: 272px;
+    max-height: 451px;
+  }
+  @include mq(desktop) {
+    max-width: 426px;
+    max-height: 584px;
+  }
+}
+.card {
+  padding: 20px 15px;
+  background-color: var(--card-background);
+  border-radius: 22px;
+}
+
+.swiper-slide {
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--button-accent-background);
+}
+// .swiper-pagination-vertical.swiper-pagination-bullets,
+// .swiper-vertical > .swiper-pagination-bullets {
+//   flex-direction: row;
+//   bottom: 50%;
+//   left: 50%;
+//   right: 35%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   display: flex;
+//   gap: 8px;
+// }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  @include mq(mobile) {
+    margin-bottom: 33px;
+  }
+  @include mq(tablet) {
+    margin-bottom: 23px;
+  }
+  @include mq(deskrop) {
+    margin-bottom: 30px;
+  }
+}
+.card__price {
+  color: var(--title-primary);
+  @include mq(mobile) {
+    @include fonts(18px, 20px, 400);
+  }
+  @include mq(tablet) {
+    @include fonts(22px, 26px, 400);
+  }
+  @include mq(deskrop) {
+    @include fonts(24px, 28px, 400);
+  }
+}
+.card__accent {
+  display: inline-block;
+  background-color: var(--price-background);
+  padding: 4px 6px;
+  border: 1px solid var(--button-accent-background);
+  border-radius: 10px;
+  @include mq(mobile) {
+    align-self: center;
+  }
+  @include mq(tablet) {
+  }
+  @include mq(desktop) {
+    align-self: flex-start;
+  }
+}
+.card .title {
+  @include mq(mobile) {
+    @include fonts(18px, 20px, 400);
+    margin-bottom: 17px;
+  }
+  @include mq(tablet) {
+    text-align: start;
+    @include fonts(22px, 26px, 400);
+    margin-bottom: 15px;
+  }
+  @include mq(deskrop) {
+    @include fonts(24px, 28px, 400);
+    margin-bottom: 20px;
+  }
+}

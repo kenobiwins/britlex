@@ -1,5 +1,5 @@
 :root {
-  --title-ptimary: #000;
+  --title-primary: #000;
   --subtitle-primary: #2a3246;
   --subtitle-second: #263238;
   --text-primary: #8f95a5;
@@ -17,4 +17,7 @@
   --logo-second: #939393;
   // transition
   --transition: 250ms linear;
+  // card
+  --indent: 40px;
+  --items: 3;
 }

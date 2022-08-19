@@ -19,12 +19,11 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: -1;
     @include mq(mobile) {
     }
     @include mq(tablet) {
       max-width: 352px;
+      position: relative;
       &::before {
         content: '';
         background-image: url(/src/images/hero/bulb-icon.webp);
