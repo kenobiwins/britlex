@@ -1,0 +1,11 @@
+.contact {
+  @include mq(mobile) {
+    @include section(26px, 26px);
+  }
+  @include mq(tabet) {
+    @include section(28px, 26px);
+  }
+  @include mq(desktop) {
+    @include section(90px, 90px);
+  }
+}
