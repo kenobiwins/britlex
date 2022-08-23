@@ -15,7 +15,7 @@
     color: var(--logo-primary);
   }
   &__link {
-    padding: 10px 0;
+    padding: 10px 8px;
   }
 }
 
@@ -62,7 +62,7 @@
     flex-direction: column;
     @include mq(desktop) {
       flex-direction: row;
-      gap: 50px;
+      gap: 32px;
     }
   }
   &__item {
@@ -83,7 +83,7 @@
   }
   &__link {
     @include fonts(20px, 24px, 500);
-    padding: 10px 0;
+    padding: 10px 8px;
   }
   &__button {
     @media screen and (max-width: 1199px) {

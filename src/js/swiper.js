@@ -4,6 +4,9 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   spaceBetween: 30,
   mousewheel: true,
+  grabCursor: true,
+
+  // effect:'cards',
 
   // If we need pagination
   pagination: {
