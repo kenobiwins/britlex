@@ -2,12 +2,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
 
-  .card-set__item {
-    flex-basis: calc(
-      (100% - var(--indent) * (var(--items) - 1)) / var(--items)
-    );
-  }
+.card-set__item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 .icon {
   fill: currentColor;
@@ -15,7 +13,7 @@
 
 .button {
   white-space: nowrap;
-  padding: 14px 56px;
+  padding: 8px 56px;
   border: 1px solid var(--button-background);
   background-color: var(--white);
   border-radius: 10px;
@@ -35,7 +33,7 @@
   &:hover,
   &:focus {
     border-color: var(--button-accent-background);
-    background-color: rgba(#39515e, 0.2);
+    background-color: rgba($color: #c4c4c4, $alpha: 0.5);
   }
 
   &--reverse {
