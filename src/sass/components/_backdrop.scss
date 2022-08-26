@@ -4,7 +4,7 @@
   height: 100vh;
   position: fixed;
   top: 0px;
-  z-index: 120;
+  z-index: 420;
 
   visibility: visible;
   opacity: 1;
@@ -12,4 +12,10 @@
   background-color: #00000033;
 
   transition: opacity var(--transition), visibility var(--transition);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
