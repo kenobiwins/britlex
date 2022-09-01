@@ -63,11 +63,18 @@
   color: var(--text-primary);
   outline: var(--text-primary) 1px solid;
   outline-offset: -2px;
+  -webkit-transition: outline var(--transition),
+    -webkit-box-shadow var(--transition);
+  transition: outline var(--transition), -webkit-box-shadow var(--transition);
+  -o-transition: outline var(--transition), box-shadow var(--transition);
   transition: outline var(--transition), box-shadow var(--transition);
+  transition: outline var(--transition), box-shadow var(--transition),
+    -webkit-box-shadow var(--transition);
 
   &:hover,
   &:focus {
     outline: #c4c4c4 2px solid;
+    -webkit-box-shadow: 0px 4px 4px 0px #00000040;
     box-shadow: 0px 4px 4px 0px #00000040;
   }
 
